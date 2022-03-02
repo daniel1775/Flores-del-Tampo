@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap');
+
+*{
+  margin: 0%;
+  padding: 0%;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flowers{
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container1{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0px;
+  
+}
+.title{
+  font-family: 'Sacramento', cursive;
+  text-align: center;
+  font-size: 80px;
+}
+.subtitle{
+  font-family: 'Mohave', sans-serif;
+  text-align: center;
+  font-size: 40px;
+}
+.bar{
+  width: 931px;
+  height: 50px;
+  border-radius: 10px;
+  margin-left: 15%;
+  box-shadow: 0px 4px 4px 0px grey;
+  margin-top: 20px;
+}
+.button-add{
+  display: flex;
+  justify-content: center;
+}
+.add{
+  width: 195px;
+  height: 51px;
+  background-color: #BEACC7;
+  border-radius: 12px;
+  color: #733561;
+  font-family: 'Mohave', sans-serif;
+  font-size: 35px;
+}
+.container-task{
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
+
+}
+.task{
+  width: 514px;
+  height: 55px;
+  background-color: #E393A6;
+  text-align: center;
+  padding-top: 20px;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-family: 'Mohave', sans-serif;
+  font-size: 30px;
 }

@@ -4,8 +4,10 @@ import todos from "./apis";
 import Form from "./components/Form";
 import Section from "./components/Section";
 import List from "./components/List";
+import flower from './img/flower.png';
+import './App.css';
 
-const appTitle = "To-Do App";
+const appTitle = "Flores del tampo";
 
 const App = () => {
     const [todoList, setTodoList] = useState([]);
@@ -34,13 +36,18 @@ const App = () => {
     };
 
     return (
+        <>
+        <div className="header">
+        <img className="flowers" src={flower} alt="garden"/>
+       </div>
         <div className="ui container center aligned">
             <Section>
-                <h1>{appTitle}</h1>
+                <h1 className="title">{appTitle}</h1>
+                <h2 className="subtitle">TO-DO LIST</h2>
             </Section>
 
-            <Section>
-                <Form addTodo={addTodo} />
+            <Section >
+                <Form  addTodo={addTodo} />
             </Section>
 
             <Section>
@@ -51,6 +58,7 @@ const App = () => {
                 />
             </Section>
         </div>
+        </>
     );
 };
 

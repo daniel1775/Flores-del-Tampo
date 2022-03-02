@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import '../App.css';
+
 
 const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp }) => {
     const [isEditing, setIsEditing] = useState(false);
@@ -36,19 +38,23 @@ const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp }) => {
     };
 
     return (
+       <>
+     
         <div className="row">
             {
             isEditing ?
                 <div className="column seven wide">
                     <div className="ui input fluid">
-                        <input
+                        <input 
                             onChange={handleInputOnChange}
                             onKeyDown={handleInputKeyDown}
                             autoFocus={true}
                             value={tempValue}
                         />
                     </div>
+                    
                 </div> :
+                
                 <>
                     <div className="column five wide" onDoubleClick={handleDivDoubleClick}>
                         <h2 className={"ui header" + (completedState ? " green" : "")}>{value}</h2>
@@ -74,6 +80,7 @@ const Todo = ({ title, completed, removeTodoItemProp, editTodoItemProp }) => {
                 </>
             }
         </div>
+        </>
     );
 };
 

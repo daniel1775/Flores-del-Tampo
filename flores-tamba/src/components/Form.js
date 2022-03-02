@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../App.css';
 
 const Form = ({ addTodo }) => {
     const [inputValue, setInputValue] = useState("");
@@ -17,11 +18,21 @@ const Form = ({ addTodo }) => {
     };
     
     return (
+       <>
+       <div className="container1">
+       <div className="container-task">
+        <h2 className="task">TAREAS A REALIZAR</h2>
+        </div>
+
+        <div className="button-add">
+        <button type="submit" className="add"><i className="white plus icon"></i>AGREGAR</button>
+        </div>
+        </div>
         <form className="ui form" onSubmit={handleFormSubmit}>
             <div className="ui grid center aligned">
                 <div className="row">
                     <div className="column five wide">
-                        <input
+                        <input className="bar"
                             value={inputValue}
                             onChange={handleInputChange}
                             type="text"
@@ -35,6 +46,7 @@ const Form = ({ addTodo }) => {
                 </div>
             </div>
         </form>
+        </>
     );
 };
 
